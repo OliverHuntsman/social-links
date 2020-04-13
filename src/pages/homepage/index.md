@@ -2,20 +2,20 @@
 templateKey: home
 title: Makeup Should enhance your natural Beauty rather than masking it xx
 
-# image: /img/Banner-Cornwell-Manor-Wedding.jpg
-# heading: Who makes the magic happen  x
-# subheading: Who are dedicated to making your wedding as special as possible x
-# mainpitch:
-#   title: Why Gemma
-#   description: >
-#     Makeup should enhance everything you have, it should be feel like you, look incredible,here at Gemma Sutton
-#     My understanding of how to achieve this best doesn't just start from when you sit in the hair and makeup chair, but from the moment we make contact we're decicated to finding out what makes you feel special - you might not even know it!
+image: /img/Banner-Cornwell-Manor-Wedding.jpg
+heading: Who makes the magic happen  x
+subheading: Who are dedicated to making your wedding as special as possible x
+mainpitch:
+  title: Why Gemma
+  description: >
+    Makeup should enhance everything you have, it should be feel like you, look incredible,here at Gemma Sutton
+    My understanding of how to achieve this best doesn't just start from when you sit in the hair and makeup chair, but from the moment we make contact we're decicated to finding out what makes you feel special - you might not even know it!
 
 
 description: >-
   Gemma Sutton is the ultimate stop for absolutely incesible makeup for your wedding day.
  
-  blocks:
+blocks:
     - order: 1
       extLink: [Gemma's Portfolio](https://gemmasutton.com/gemma-suttons-portfolio/)
 
