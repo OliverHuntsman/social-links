@@ -37,95 +37,95 @@ export const IndexPageTemplate = ({
 
 
 
-// IndexPageTemplate.propTypes = {
-//   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-//   title: PropTypes.string,
-//   heading: PropTypes.string,
-//   subheading: PropTypes.string,
-//   mainpitch: PropTypes.object,
-//   description: PropTypes.string,
-//   slug: PropTypes.string,
-//   intro: PropTypes.shape({
-//     blurbs: PropTypes.array,
-//   }),
-// }
+IndexPageTemplate.propTypes = {
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  title: PropTypes.string,
+  heading: PropTypes.string,
+  subheading: PropTypes.string,
+  mainpitch: PropTypes.object,
+  description: PropTypes.string,
+  slug: PropTypes.string,
+  intro: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
+}
 
-// const IndexPage = ({ data }) => {
-//   const { frontmatter } = data.markdownRemark
+const IndexPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark
 
-//   return (
-//     <Layout>
-//       <IndexPageTemplate
-//         image={frontmatter.image}
-//         title={frontmatter.title}
-//         heading={frontmatter.heading}
-//         subheading={frontmatter.subheading}
-//         mainpitch={frontmatter.mainpitch}
-//         description={frontmatter.description}
-//         intro={frontmatter.intro}
-//         slug={frontmatter.slug}
-//       />
-//     </Layout>
-//   )
-// }
+  return (
+    <Layout>
+      <IndexPageTemplate
+        image={frontmatter.image}
+        title={frontmatter.title}
+        heading={frontmatter.heading}
+        subheading={frontmatter.subheading}
+        mainpitch={frontmatter.mainpitch}
+        description={frontmatter.description}
+        intro={frontmatter.intro}
+        slug={frontmatter.slug}
+      />
+    </Layout>
+  )
+}
 
-// IndexPage.propTypes = {
-//   data: PropTypes.shape({
-//     markdownRemark: PropTypes.shape({
-//       frontmatter: PropTypes.object,
-//     }),
-//   }),
-// }
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
+}
 
 
-// export default IndexPage
+export default IndexPage
 
-// export const pageQuery = graphql`
-// query IndexPageTemplate {
-//   markdownRemark(frontmatter: { templateKey: { eq: "home" } }) {
-//     frontmatter {
-//       title
-//       image {
-//         childImageSharp {
-//           fluid( maxWidth: 800, quality:100) {
-//             ...GatsbyImageSharpFluid
-//           }
-//         }
-//       }
+export const pageQuery = graphql`
+query IndexPageTemplate {
+  markdownRemark(frontmatter: { templateKey: { eq: "home" } }) {
+    frontmatter {
+      title
+      image {
+        childImageSharp {
+          fluid( maxWidth: 800, quality:100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
 
-//       heading
-//       subheading
-//       mainpitch {
-//         title
-//         description
-//       }
+      heading
+      subheading
+      mainpitch {
+        title
+        description
+      }
 
-//       description
-//       intro {
-//         blurbs {
-//           banner {
-//             childImageSharp {
-//               fluid(maxWidth: 500, quality:100){
-//                 ...GatsbyImageSharpFluid
-//               }
-//             }
-//           }
-//           image {
-//             childImageSharp {
-//               fluid(maxWidth: 150, quality: 100){
-//                 ...GatsbyImageSharpFluid
-//               }
-//             }
-//           }
-//           text
-//           slug
-//           name
+      description
+      intro {
+        blurbs {
+          banner {
+            childImageSharp {
+              fluid(maxWidth: 500, quality:100){
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image {
+            childImageSharp {
+              fluid(maxWidth: 150, quality: 100){
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          text
+          slug
+          name
         
-//         }
-//         heading2
-//         description
-//       }
-//     }
-//   }
-// }
-// `
+        }
+        heading2
+        description
+      }
+    }
+  }
+}
+`
